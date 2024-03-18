@@ -20,6 +20,11 @@ public abstract class Usuario {
     private String email;
     private String senha;
     private String telefone;
+    private String rua;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String cep;
 
     @NotNull
     private String tipoUsuario;
