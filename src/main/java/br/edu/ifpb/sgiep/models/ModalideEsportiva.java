@@ -1,7 +1,7 @@
 package br.edu.ifpb.sgiep.models;
 
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "modalidade_esportiva")
@@ -11,7 +11,9 @@ public class ModalideEsportiva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    @NotBlank(message="Campo obrigatório")
     private String nomeModalidade;
     private String descricao;
+    @NotBlank(message="Campo obrigatório")
+    private int maxParticipantes;
 }
